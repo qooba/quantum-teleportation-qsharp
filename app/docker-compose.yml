@@ -1,0 +1,31 @@
+version: '2.2'
+services:
+  quantum-computer:
+    build: ../docker/quantum-computer
+    networks:
+      - qnet
+    environment:
+      - ES_HOST=http://elasticsearch:9200
+      - ES_INDEX=tmdb
+      - ES_TYPE=movie
+    volumes:
+      - ../docker/quantum-computer:/app
+
+  nginx:
+    image: "nginx:1.13.5"
+    ports:
+      - "8020:80"
+    volumes:
+      - ../docker/frontend-reverse-proxy/conf:/etc/nginx/conf.d
+      - ../docker/frontend-reverse-proxy/www/data:/www/data
+    depends_on:
+      - quantum-computer
+    networks:
+      - qnet
+
+volumes:
+  esdata1:
+    driver: local
+
+networks:
+  qnet:

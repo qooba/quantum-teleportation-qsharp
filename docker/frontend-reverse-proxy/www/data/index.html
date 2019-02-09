@@ -1,0 +1,69 @@
+<!doctype html>
+<html ng-app="app">
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js"></script>
+  <script src="/js/components.js"></script>
+  <script src="/js/app.js"></script>
+
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script> -->
+
+</head>
+
+<body>
+  <div class="container">
+    <br />
+    <div class="jumbotron">
+      <h1>Quantum teleportation with Q# </h1>
+    </div>
+
+    <div ng-controller="IndexController">
+      <div class="row">
+        <div class="col-md-3">
+          <h3>Laboratory 1:</h3>
+        </div>
+      </div>
+      <div class="row">
+        <input type="text" class="form-control" ng-model="q">
+      </div>
+      <br />
+      <div class="row">
+        <div class="col-md-3">
+          <h3>Laboratory 2:</h3>
+        </div>
+      </div>
+      <div class="row">
+        <label>teleported text:</label>
+        <input type="text" class="form-control" ng-model="t" readonly>
+        <!-- <label>teleported qubits number:</label>
+        <input type="text" class="form-control" ng-model="qnum" readonly> -->
+      </div>
+
+      <br />
+      <div class="row">
+        <div>
+          <button type="button" class="btn btn-primary btn-lg center" ng-click="teleport()">Teleport</button>
+        </div>
+      </div>
+
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
