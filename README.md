@@ -1,1 +1,2 @@
-# quantum-teleportation-qsharp
+Quick guide to the quantum teleportation with Q#.
+Read more on: [https://qooba.net/2019/02/09/quantum-teleportation-do-it-yourself-with-q/](https://qooba.net/2019/02/09/quantum-teleportation-do-it-yourself-with-q/).
